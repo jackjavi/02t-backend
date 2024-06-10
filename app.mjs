@@ -21,7 +21,6 @@ import getPredictionsRoutes from "./routes/getPredictionsRoutes.mjs";
 import getFootballFixturesRoutes from "./routes/getFootballFixturesRoutes.mjs";
 import historyRoutes from "./routes/historyRoutes.mjs";
 import AppController from "./routes/appRoutes.mjs";
-import formatArtcielsRoutes from "./routes/generativeAI/generativeAIRoutes.mjs  ";
 import fileUploaderRoutes from "./routes/fileUploaderRoutes.mjs";
 import markdownToHtmlRoutes from "./routes/markdownToHtmlRoutes.mjs";
 import gameDataCollectRoutes from "./routes/gameDataCollectRoutes.mjs";
@@ -72,7 +71,6 @@ app.use("/api/football", analyzeResultsRoutes);
 app.use("/api/football", historyRoutes);
 app.use("/api/markdown", markdownToHtmlRoutes);
 app.use("/api/upload", fileUploaderRoutes);
-app.use("/api/generativeAI", formatArtcielsRoutes);
 
 import authenticate from "./middleware/authenticate.mjs";
 app.use("/api/games", authenticate, gameDataRoutes);
